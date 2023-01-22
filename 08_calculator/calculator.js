@@ -7,19 +7,30 @@ const subtract = function(a,b) {
 	
 };
 
-const sum = function() {
+const sum = function(numberArray) {
+  return numberArray.reduce((total, num) => total + num,0);
+};
+
+const multiply = function(numberArray) {
+  if (numberArray.length < 1) {
+    return 0;
+  }
+  return numberArray.reduce((total,num) => total*num, 1);
+
+};
+
+const power = function(a,b) {
+  return a ** b;
 	
 };
 
-const multiply = function() {
-
-};
-
-const power = function() {
-	
-};
-
-const factorial = function() {
+const factorial = function(num) {
+  let finalVal = 1;
+  while (num > 0) {
+    finalVal *= num;
+    num--;
+  }
+  return finalVal;
 	
 };
 
